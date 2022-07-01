@@ -1,0 +1,27 @@
+.burger-button {
+  position: absolute;
+  content: "";
+  z-index: 3;
+  right: 30px;
+  top: 24px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    display: block;
+    content: "";
+    width: 24px;
+    height: 4px;
+    top: 0;
+    left: 0;
+    box-shadow:
+      0 4px 0 0 @marine,
+      0 12px 0 0 @marine,
+      0 20px 0 0 @marine;
+  }
+}
