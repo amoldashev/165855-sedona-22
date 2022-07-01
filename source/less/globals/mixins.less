@@ -1,0 +1,49 @@
+.font-face(@font-family, @file-path, @font-weight, @font-style) {
+  @font-face {
+    font-family: @font-family;
+    src:
+      url("@{file-path}.woff2") format("woff2"),
+      url("@{file-path}.woff") format("woff");
+    font-weight: @font-weight;
+    font-style: @font-style;
+  }
+}
+
+.font(@font-family, @font-size, @font-weight, @font-style) {
+  font-family: @font-family;
+  font-size: @font-size;
+  font-weight: @font-weight;
+  font-style: @font-style;
+}
+
+// Прячет блоки
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+// Обертка
+.container {
+  width: 292px;
+  padding: 0 5px;
+  margin: 0 auto;
+}
+
+// Удаляет стили ссылочных тегов
+.link-decoration {
+  text-decoration: none;
+}
+// Обнуляет булеты в списках
+.clear-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

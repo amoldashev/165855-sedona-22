@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  .font(@base-f-family, @base-f-size, @base-f-weight, @base-f-style);
+
+  margin: 0;
+  min-width: @min-width;
+  min-height: 100%;
+  background-color: @basic-white;
+  color: @basic-black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: @basic-black;
+}
