@@ -11,42 +11,47 @@
   <body class="page-body">
     <header class="main-header">
       <nav class="main-header__main-nav main-nav">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a>Главная</a>
+        <ul class="main-nav__list menu">
+          <li class="menu__item">
+            <a class="menu__link">Главная</a>
           </li>
-          <li class="main-nav__item">
-            <a href="#">Фото и видео</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Фото и видео</a>
           </li>
-          <li class="main-nav__item">
-            <a href="#">Форма отзыва</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Форма отзыва</a>
           </li>
-          <li class="main-nav__item">
-            <a href="#">HTML Academy</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">HTML Academy</a>
           </li>
         </ul>
+        <div class="main-nav__page-logo page-logo">
+          <img
+            class="page-logo__img"
+            src="img/icons/logo.svg"
+            width="102"
+            height="59"
+            alt="Логотип Седона"
+          />
+        </div>
+        <button
+          class="main-nav__burger-button burger-button"
+          type="button"
+        ></button>
       </nav>
-      <div class="main-header__logo">
-        <img
-          class="main-header__logo-img"
-          src="img/icons/logo.svg"
-          width="102"
-          height="59"
-          alt="Логотип Седона"
-        />
-      </div>
-      <div class="main-header__banner banner">
-        <img
-          class="banner__img"
-          src="img/header_bg.jpg"
-          width="901"
-          height="389"
-          alt="Вид на каньон"
-        />
-      </div>
-      <button class="main-header__burger-button burger-button" type="button"></button>
     </header>
     <main>
+      <section class="banner">
+        <div class="banner__content">
+          <img
+            class="banner__img"
+            src="img/header_bg.jpg"
+            width="901"
+            height="389"
+            alt="Вид на каньон"
+          />
+        </div>
+      </section>
       <section class="features">
         <div class="features-wrapper">
           <header class="features-header">
