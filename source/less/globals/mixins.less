@@ -16,7 +16,6 @@
   font-style: @font-style;
 }
 
-// Прячет блоки
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -30,20 +29,23 @@
   overflow: hidden;
 }
 
-// Обертка
 .container {
   width: 292px;
   padding: 0 5px;
   margin: 0 auto;
 }
 
-// Удаляет стили ссылочных тегов
 .link-decoration {
   text-decoration: none;
 }
-// Обнуляет булеты в списках
+
 .clear-list {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.button(@bg-color, @text-color) {
+  background-color: @bg-color;
+  color: @text-color;
 }
