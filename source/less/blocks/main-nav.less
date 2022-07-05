@@ -4,7 +4,7 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    .container(@width: @tablet-width, @padding: 36px);
+    .container(@width: @tablet-width, @padding: @tablet-padding);
 
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -13,7 +13,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    .container(@width: @desktop-width, @padding: 60px);
+    .container(@desktop-width, @desktop-padding);
   }
 }
 

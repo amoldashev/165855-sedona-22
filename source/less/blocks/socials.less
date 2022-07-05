@@ -1,0 +1,23 @@
+.socials__title {
+  .visually-hidden();
+}
+
+.socials__list {
+  .clear-list();
+  .container(150px, 0);
+
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+  }
+}
+
+.socials__link {
+  display: flex;
+  width: 46px;
+  height: 48px;
+  background-color: @marine;
+  justify-content: center;
+}

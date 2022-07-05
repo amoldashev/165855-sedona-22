@@ -1,0 +1,31 @@
+.page-footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    .container(@tablet-width, @tablet-padding);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width: @desktop-width) {
+    .container(@desktop-width, @desktop-padding);
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.page-footer__text {
+  .container();
+
+  display: block;
+  width: 100%;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+  }
+}
