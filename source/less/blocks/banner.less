@@ -1,4 +1,27 @@
+.banner__content {
+  position: relative;
+  width: 320px;
+  height: 389px;
+
+  &::before {
+    position: absolute;
+    z-index: 5;
+    display: block;
+    content: "";
+    width: 282px;
+    height: 214px;
+    top: 90px;
+    left: 20px;
+    background-image: url("../../img/icons/intro.svg");
+    background-repeat: no-repeat;
+  }
+}
+
 .banner__img {
+  display: block;
+  width: 320px;
+  height: 389px;
+
   @media (min-width: @tablet-width) {
     display: block;
   }
