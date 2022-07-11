@@ -1,20 +1,24 @@
 .font-face(@font-family, @file-path, @font-weight, @font-style) {
   @font-face {
     font-family: @font-family;
-    src:
-      url("@{file-path}.woff2") format("woff2"),
+    src: url("@{file-path}.woff2") format("woff2"),
       url("@{file-path}.woff") format("woff");
     font-weight: @font-weight;
     font-style: @font-style;
   }
 }
 
-.font(@font-family, @font-size, @font-weight, @font-style, @base-l-height) {
+.font(
+  @font-family,
+  @font-size,
+  @font-weight,
+  @font-style,
+  @line-height) {
   font-family: @font-family;
   font-size: @font-size;
   font-weight: @font-weight;
   font-style: @font-style;
-  line-height: @base-l-height;
+  line-height: @line-height;
 }
 
 .visually-hidden {
