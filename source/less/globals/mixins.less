@@ -9,11 +9,12 @@
   }
 }
 
-.font(@font-family, @font-size, @font-weight, @font-style) {
+.font(@font-family, @font-size, @font-weight, @font-style, @line-height) {
   font-family: @font-family;
   font-size: @font-size;
   font-weight: @font-weight;
   font-style: @font-style;
+  line-height: @line-height;
 }
 
 .visually-hidden {
@@ -29,11 +30,7 @@
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-.container(@width, @padding) {
-=======
 .container(@width: @min-width, @padding: 30px) {
->>>>>>> 9c69f36120e6e702d008c189106668e2f4ecd9f6
   width: @width;
   padding: 0 @padding;
   margin: 0 auto;
