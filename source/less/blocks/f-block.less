@@ -2,6 +2,15 @@
   .lead-f-block;
 }
 
+.f-block__text-content {
+  @media (min-width: @tablet-width) {
+    grid-column-start: 3;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
 .f-block__text {
   display: block;
   margin: 0;
@@ -12,5 +21,13 @@
 }
 
 .f-block__img {
-  .lead-f-block__img;
+  display: block;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
 }
