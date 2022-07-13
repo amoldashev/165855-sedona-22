@@ -1,0 +1,38 @@
+.map-api__content {
+  height: 350px;
+
+  &--before {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      display: block;
+      z-index: 2;
+      content: "";
+      width: 27px;
+      height: 27px;
+      background-color: @marine;
+      border: 4px solid @basic-white;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  @media (max-width: @tablet-width) {
+    .container(auto, 0);
+  }
+}
+
+.map-api__title {
+  &--hidden {
+    .visually-hidden;
+  }
+}
+
+.map-api__img {
+  display: block;
+  width: 100%;
+  height: inherit;
+}
