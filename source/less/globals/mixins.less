@@ -9,11 +9,11 @@
 }
 
 .font(
-  @font-family,
-  @font-size,
-  @font-weight,
-  @font-style,
-  @line-height) {
+  @font-family: @base-f-family,
+  @font-size: @base-f-size,
+  @font-weight: @base-f-weight,
+  @font-style: @base-f-style,
+  @line-height: @base-l-height) {
   font-family: @font-family;
   font-size: @font-size;
   font-weight: @font-weight;
@@ -50,7 +50,7 @@
   list-style: none;
 }
 
-.button(@bg-color, @text-color) {
+.button(@bg-color: @basic-white, @text-color: @basic-black) {
   background-color: @bg-color;
   color: @text-color;
 }
