@@ -1,11 +1,10 @@
 .commodities {
   .clear-list();
+  .container();
 
   background-color: @basic-white;
   color: @basic-black;
   text-align: left;
-  padding-top: 20px;
-  padding-left: 60px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -18,8 +17,51 @@
 
   display: block;
   margin: 0;
+  padding-top: 10px;
 
   &--leading {
     .font(@font-size: 18px, @font-weight: 700);
+
+    padding-top: 20px;
+  }
+}
+
+.commodities__item {
+  position: relative;
+  padding-left: 60px;
+
+  &--before {
+    &::before {
+      position: absolute;
+      z-index: 2;
+      content: "";
+      display: block;
+      width: 39px;
+      height: 36px;
+      top: 20px;
+      left: 0;
+    }
+  }
+
+  &--before1 {
+    &::before {
+      background-image: url("../../img/icons/home.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--before2 {
+    &::before {
+      height: 38px;
+      background-image: url("../../img/icons/gift.svg");
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--before3 {
+    &::before {
+      background-image: url("../../img/icons/burger.svg");
+      background-repeat: no-repeat;
+    }
   }
 }

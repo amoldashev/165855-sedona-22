@@ -2,10 +2,24 @@
   background-color: @marine;
   color: @basic-white;
   text-align: center;
-  padding-top: 20px;
+  position: relative;
+  padding-top: 60px;
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
+  }
+
+  &::before {
+    position: absolute;
+    z-index: 3;
+    content: "";
+    display: block;
+    width: 768px;
+    height: 37px;
+    top: 0;
+    left: -220px;
+    background-image: url("../../img/icons/white-collar.svg");
+    background-repeat: no-repeat;
   }
 }
 
