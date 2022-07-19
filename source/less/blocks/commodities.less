@@ -5,10 +5,16 @@
   background-color: @basic-white;
   color: @basic-black;
   text-align: left;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 30px;
 
   @media (min-width: @tablet-width) {
+    .reset-container();
+
+    display: flex;
     padding-top: 0;
-    padding-left: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -23,12 +29,28 @@
     .font(@font-size: 18px, @font-weight: 700);
 
     padding-top: 20px;
+
+    @media (min-width: @tablet-width) {
+      .font(@font-size: 21px, @font-weight: 700);
+    }
   }
 }
 
 .commodities__item {
   position: relative;
   padding-left: 60px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0  36px;
+    padding-top: 150px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 58px;
+    padding-top: 150px;
+  }
+
 
   &--before {
     &::before {
@@ -40,6 +62,17 @@
       height: 36px;
       top: 20px;
       left: 0;
+
+      @media (min-width: @tablet-width) {
+        width: 75px;
+        height: 75px;
+        top: 70px;
+        left: 90px;
+      }
+
+      @media (min-width: @desktop-width) {
+        left: 160px;
+      }
     }
   }
 
@@ -47,6 +80,11 @@
     &::before {
       background-image: url("../../img/icons/home.svg");
       background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/icons/home-tablet.svg");
+        height: 72px;
+      }
     }
   }
 
@@ -55,6 +93,11 @@
       height: 38px;
       background-image: url("../../img/icons/gift.svg");
       background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/icons/gift-tablet.svg");
+        height: 75px;
+      }
     }
   }
 
@@ -62,6 +105,18 @@
     &::before {
       background-image: url("../../img/icons/burger.svg");
       background-repeat: no-repeat;
+
+      @media (min-width: @tablet-width) {
+        background-image: url("../../img/icons/burger-tablet.svg");
+        top: 75px;
+        left: 95px;
+        height: 72px;
+      }
+
+      @media (min-width: @desktop-width) {
+
+        left: 170px;
+      }
     }
   }
 }

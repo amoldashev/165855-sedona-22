@@ -12,9 +12,6 @@
 
   @media (min-width: @desktop-width) {
     .container(@desktop-width, @desktop-padding);
-
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -27,5 +24,19 @@
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
+  }
+
+  &--hashtag {
+    .font(@font-size: 21px, @font-weight: 700);
+
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+    @media (min-width: @tablet-width) {
+      width: 130px;
+      margin: 0;
+      padding: 0;
+      justify-self: start;
+    }
   }
 }

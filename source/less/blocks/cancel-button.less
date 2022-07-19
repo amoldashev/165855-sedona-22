@@ -1,0 +1,39 @@
+.cancel-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 30px;
+  right: 30px;
+  background-color: transparent;
+  border: none;
+
+  &::before {
+    position: absolute;
+    z-index: 2;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: @basic-white;
+    top: 11px;
+    right: -2px;
+    transform: rotate(-45deg);
+  }
+
+  &::after {
+    position: absolute;
+    z-index: 5;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 4px;
+    background-color: @basic-white;
+    top: 11px;
+    right: -2px;
+    transform: rotate(45deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}

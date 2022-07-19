@@ -4,16 +4,20 @@
   flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
-    .container(@width: @tablet-width, @padding: @tablet-padding);
+    .container(@width: @tablet-width, @padding: 0);
 
     display: grid;
+    width: 695px;
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "gallery media logo reviews reference";
     height: unset;
+    align-items: center;
   }
 
   @media (min-width: @desktop-width) {
-    .container(@desktop-width, @desktop-padding);
+    .container(@width: @desktop-width, @padding: 0);
+
+    width: 1038px;
   }
 }
 
@@ -25,7 +29,10 @@
 
   @media (min-width: @tablet-width) {
     background-color: @basic-white;
-    height: 84px;
     grid-area: logo;
   }
+}
+
+.main-nav__menu {
+  width: 100%;
 }

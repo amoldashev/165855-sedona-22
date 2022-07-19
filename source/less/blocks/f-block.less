@@ -1,5 +1,11 @@
 .f-block__wrapper {
   .container();
+
+  @media (min-width: @tablet-width) {
+    .reset-container();
+
+    padding: 0 30px;
+  }
 }
 
 .f-block__text-content {
@@ -17,6 +23,11 @@
 
   &--leading {
     .font(@font-size: 18px, @font-weight: 700);
+
+    @media (min-width: @tablet-width) {
+      width: 130px;
+      margin: 0 auto;
+    }
   }
 }
 

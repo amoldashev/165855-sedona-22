@@ -43,6 +43,7 @@ exports.server = server;
 
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
+  gulp.watch("source/js/**/*.js").on("change", sync.reload);
   gulp.watch("source/*.html").on("change", sync.reload);
 }
 

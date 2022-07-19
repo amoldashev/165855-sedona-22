@@ -1,10 +1,11 @@
 .features__f-blocks {
   @media (min-width: @tablet-width) {
-    .container(@tablet-width, @tablet-padding);
+    width: 768px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
-    .container(@desktop-width, @desktop-padding);
+    .container(@desktop-width, @padding: 0);
   }
 }
 

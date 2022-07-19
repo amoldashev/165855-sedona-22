@@ -14,10 +14,18 @@
   }
 }
 
-.middle-f-block__text {
-  display: block;
-  margin: 0;
+.middle-f-block__wrapper {
+  .container();
 
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.middle-f-block__text {
   &--leading {
     .font(@font-size: 18px, @font-weight: 700);
   }

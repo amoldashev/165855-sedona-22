@@ -10,27 +10,36 @@
 
   <body class="page-body">
     <header class="main-header">
-      <nav class="main-header__main-nav main-nav">
-        <ul class="main-nav__list menu">
-          <li class="menu__item">
-            <a class="menu__link menu__link--grid-item1">Главная</a>
-          </li>
-          <li class="menu__item">
-            <a class="menu__link menu__link--grid-item2" href="#"
-              >Фото и видео</a
-            >
-          </li>
-          <li class="menu__item">
-            <a class="menu__link menu__link--grid-item3" href="#"
-              >Форма отзыва</a
-            >
-          </li>
-          <li class="menu__item">
-            <a class="menu__link menu__link--last-child menu__link--grid-item4" href="#"
-              >HTML Academy</a
-            >
-          </li>
-        </ul>
+      <nav class="main-header__main-nav main-nav main-header__main-nav--nojs">
+        <div class="main-nav__menu menu">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link menu__link--grid-item1">Главная</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--grid-item2" href="#"
+                >Фото и видео</a
+              >
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--grid-item3" href="#"
+                >Форма отзыва</a
+              >
+            </li>
+            <li class="menu__item">
+              <a
+                class="menu__link menu__link--last-child menu__link--grid-item4"
+                href="#"
+                >HTML Academy</a
+              >
+            </li>
+          </ul>
+          <button
+            id="menu-cancel"
+            class="menu__cancel-button cancel-button"
+            type="button"
+          ></button>
+        </div>
         <div class="main-nav__page-logo page-logo">
           <img
             class="page-logo__img"
@@ -41,6 +50,7 @@
           />
         </div>
         <button
+          id="menu-button"
           class="main-nav__burger-button burger-button"
           type="button"
         ></button>
@@ -48,38 +58,43 @@
     </header>
     <main>
       <section class="banner">
-        <div class="banner__content">
-          <img
-            class="banner__img"
-            src="img/header_bg.jpg"
-            width="1200"
-            height="518"
-            alt="Вид на каньон"
-          />
-          <div class="banner__triangles"></div>
-        </div>
+        <img
+          class="banner__img"
+          src="img/icons/intro.svg"
+          width="285"
+          height="214"
+          alt="Вид на каньон"
+        />
       </section>
       <section class="features">
         <div class="features__content">
           <header class="features__top-header top-header">
-            <h1 class="top-header__title">
-              Седона — небольшой городок в Аризоне, заслуживающий&nbsp;большего!
-            </h1>
-            <p class="top-header__text">
-              Рассмотрим 5 причин, по которым Седона круче, чем
-              Гранд Каньон!
-            </p>
+            <div class="top-header__wrapper">
+              <h1 class="top-header__title">
+                Седона — небольшой городок в Аризоне,
+                заслуживающий&nbsp;большего!
+              </h1>
+              <p class="top-header__text">
+                Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!
+              </p>
+            </div>
           </header>
           <div class="features__f-blocks f-blocks">
-            <h2 class="f-blocks__title f-blocks__title--hidden">Список преимуществ</h2>
+            <h2 class="f-blocks__title f-blocks__title--hidden">
+              Список преимуществ
+            </h2>
             <ol class="f-blocks__list f-grid">
-              <li class="f-blocks__item f-block lead-f-block f-grid__item1 f-grid__item1--subgrid">
+              <li
+                class="f-blocks__item f-block lead-f-block f-grid__item1 f-grid__item1--subgrid"
+              >
                 <div class="lead-f-block__text-content">
-                  <h3 class="lead-f-block__title">Настоящий городок</h3>
-                  <p class="lead-f-block__text">— №1 —</p>
-                  <p class="lead-f-block__text">
-                    Седона не аттракцион для туристов, там течет своя жизнь
-                  </p>
+                  <div class="lead-f-block__wrapper">
+                    <h3 class="lead-f-block__title">Настоящий городок</h3>
+                    <p class="lead-f-block__text">— №1 —</p>
+                    <p class="lead-f-block__text">
+                      Седона не аттракцион для туристов, там течет своя жизнь
+                    </p>
+                  </div>
                 </div>
                 <img
                   class="lead-f-block__img"
@@ -89,33 +104,53 @@
                   alt="Зеленый таунхаус в Седоне"
                 />
                 <ul class="lead-f-block__list commodities">
-                  <li class="commodities__item commodities__item--before commodities__item--before1">
-                    <p class="commodities__text commodities__text--leading">Жилье</p>
+                  <li
+                    class="commodities__item commodities__item--before commodities__item--before1"
+                  >
+                    <p class="commodities__text commodities__text--leading">
+                      Жилье
+                    </p>
                     <p class="commodities__text">
                       Рекомендуем пожить в настоящем мотеле, все как в кино!
                     </p>
                   </li>
-                  <li class="commodities__item commodities__item--before commodities__item--before2">
-                    <p class="commodities__text commodities__text--leading">Сувениры</p>
+                  <li
+                    class="commodities__item commodities__item--before commodities__item--before2"
+                  >
+                    <p class="commodities__text commodities__text--leading">
+                      Сувениры
+                    </p>
                     <p class="commodities__text">
                       Не только китайского, но и местного производства!
                     </p>
                   </li>
-                  <li class="commodities__item commodities__item--before commodities__item--before3">
-                    <p class="commodities__text commodities__text--leading">Еда</p>
+                  <li
+                    class="commodities__item commodities__item--before commodities__item--before3"
+                  >
+                    <p class="commodities__text commodities__text--leading">
+                      Еда
+                    </p>
                     <p class="commodities__text">
                       Всегда заказывайте фирменный бургер, вы не разочаруетесь!
                     </p>
                   </li>
                 </ul>
               </li>
-              <li class="f-blocks__item f-block middle-f-block f-grid__item2 f-grid__item2--subgrid">
+              <li
+                class="f-blocks__item f-block middle-f-block f-grid__item2 f-grid__item2--subgrid"
+              >
                 <div class="middle-f-block__text-content">
-                  <p class="middle-f-block__text middle-f-block__text--leading">Там есть мост дьявола</p>
-                  <p class="middle-f-block__text">— №2 —</p>
-                  <p class="middle-f-block__text">
-                    Да, по нему можно пройти! Если Вы осмелитесь, конечно
-                  </p>
+                  <div class="middle-f-block__wrapper">
+                    <p
+                      class="middle-f-block__text middle-f-block__text--leading"
+                    >
+                      Там есть мост дьявола
+                    </p>
+                    <p class="middle-f-block__text">— №2 —</p>
+                    <p class="middle-f-block__text">
+                      Да, по нему можно пройти! Если Вы осмелитесь, конечно
+                    </p>
+                  </div>
                 </div>
                 <img
                   class="middle-f-block__img"
@@ -127,7 +162,9 @@
               </li>
               <li class="f-blocks__item f-block rest f-grid__item3">
                 <div class="f-block__wrapper rest__content">
-                  <p class="f-block__text f-block__text--leading">Небольшая площадь</p>
+                  <p class="f-block__text f-block__text--leading">
+                    Небольшая площадь
+                  </p>
                   <p class="f-block__text">— №3 —</p>
                   <p class="f-block__text">
                     Все интересные места находятся очень близко
@@ -136,7 +173,9 @@
               </li>
               <li class="f-blocks__item f-block rest f-grid__item4">
                 <div class="f-block__wrapper rest__content">
-                  <p class="f-block__text f-block__text--leading">Красивая дорога</p>
+                  <p class="f-block__text f-block__text--leading">
+                    Красивая дорога
+                  </p>
                   <p class="f-block__text">— №4 —</p>
                   <p class="f-block__text">
                     Ехать в Седону из Лас-Вегаса совсем не скучно!
@@ -145,7 +184,9 @@
               </li>
               <li class="f-blocks__item f-block rest f-grid__item5">
                 <div class="f-block__wrapper rest__content">
-                  <p class="f-block__text f-block__text--leading">Мало туристов</p>
+                  <p class="f-block__text f-block__text--leading">
+                    Мало туристов
+                  </p>
                   <p class="f-block__text">— №5 —</p>
                   <p class="f-block__text">
                     Большинство едет в Гранд Каньон и толпится там
@@ -158,7 +199,9 @@
       </section>
       <section class="location">
         <div class="location__content location__content--wrapper">
-          <h2 class="location__title location__title--hidden">Гостиницы на карте</h2>
+          <h2 class="location__title location__title--hidden">
+            Гостиницы на карте
+          </h2>
           <p class="location__text location__text--leading">
             Заинтересовались?
           </p>
@@ -171,7 +214,9 @@
       </section>
       <section class="map-api">
         <div class="map-api__content map-api__content--before">
-          <h2 class="map-api__title map-api__title--hidden">Расположение Седоны на карте</h2>
+          <h2 class="map-api__title map-api__title--hidden">
+            Расположение Седоны на карте
+          </h2>
           <img
             class="map-api__img"
             src="img/map.png"
@@ -243,4 +288,5 @@
       </div>
     </footer>
   </body>
+  <script src="./js/index.js"></script>
 </html>

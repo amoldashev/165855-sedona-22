@@ -1,72 +1,39 @@
-.banner__content {
+.banner {
+  .container();
+
   position: relative;
-  width: @min-width;
+  width: 100%;
   height: 389px;
+  background-color: @marine;
+  background-image: url("../img/header_bg.jpg");
+  background-position: center 0;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 
   @media (min-width: @tablet-width) {
-    .container(@tablet-width, @tablet-padding);
-
-    width: @tablet-width;
+    width: 768px;
+    margin: 0 auto;
     height: 518px;
   }
 
   @media (min-width: @desktop-width) {
-    .container(@tablet-width, @desktop-padding);
+    .container(@tablet-width, @padding: 0);
 
     width: @desktop-width;
   }
 
   &::before {
     position: absolute;
-    z-index: 5;
-    display: block;
-    content: "";
-    width: 282px;
-    height: 214px;
-    top: 90px;
-    left: 20px;
-    background-image: url("../../img/icons/intro.svg");
-    background-repeat: no-repeat;
-
-    @media (min-width: @tablet-width) {
-      width: 461px;
-      height: 349px;
-      top: 90px;
-      left: 150px;
-      background-image: url("../../img/icons/intro-tablet.svg");
-    }
-
-    @media (min-width: @desktop-width) {
-      left: 370px;
-      background-image: url("../../img/icons/intro-tablet.svg");
-    }
-  }
-}
-
-.banner__triangles {
-  position: relative;
-
-  &::before {
-    position: absolute;
     z-index: 1;
     content: "";
     display: block;
-    width: 159px;
+    width: 100%;
     height: 57px;
     bottom: 0;
-    left: 0;
+    right: 50%;
     background-image: url("../../img/icons/triangle.svg");
+    background-position: right bottom;
     background-repeat: no-repeat;
-
-    @media (min-width: @tablet-width) {
-      background-image: url("../../img/icons/triangle-tablet.svg");
-      width: 100%;
-      bottom: -2px;
-    }
-
-    @media (min-width: @desktop-width) {
-      background-image: url("../../img/icons/triangle-desktop.svg");
-    }
   }
 
   &::after {
@@ -74,34 +41,27 @@
     z-index: 1;
     content: "";
     display: block;
-    width: 159px;
+    width: 100%;
     height: 57px;
     bottom: 0;
-    right: 0;
+    left: 50%;
     background-image: url("../../img/icons/triangle.svg");
+    background-position: right bottom;
     background-repeat: no-repeat;
     transform: rotateY(180deg);
-
-    @media (min-width: @tablet-width) {
-      background-image: url("../../img/icons/triangle-tablet.svg");
-      width: 100%;
-      bottom: -2px;
-    }
-
-    @media (min-width: @desktop-width) {
-      background-image: url("../../img/icons/triangle-desktop.svg");
-    }
   }
 }
 
 .banner__img {
   display: block;
-  width: 320px;
+  width: 100%;
   height: 389px;
 
   @media (min-width: @tablet-width) {
-    width: @tablet-width;
-    height: 100%;
+    width: 461px;
+    height: 350px;
+    margin: 0 auto;
+    padding-top: 90px;
   }
 
   @media (min-width: @desktop-width) {
