@@ -20,8 +20,25 @@
 
 .socials__link {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 46px;
   height: 48px;
   background-color: @marine;
-  justify-content: center;
+
+  &:hover {
+    background-color: @marine-hover;
+  }
+
+  &:active {
+    background-color: @marine-active;
+  }
+}
+
+.socials__img {
+  fill: @basic-white;
+
+  &:active {
+    opacity: 0.3;
+  }
 }

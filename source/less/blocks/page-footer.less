@@ -3,24 +3,36 @@
   flex-direction: column;
   align-items: center;
 
+  @media (min-width: 500px) {
+    flex-direction: row;
+  }
+
   @media (min-width: @tablet-width) {
     .container(@tablet-width, @tablet-padding);
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 40px;
   }
 
   @media (min-width: @desktop-width) {
     .container(@desktop-width, @desktop-padding);
+
+    padding-bottom: 40px;
   }
 }
 
 .page-footer__text {
+  .font(@font-size: 14px);
   .container();
 
   display: block;
   width: 100%;
   text-align: center;
+
+  @media (min-width: 321px) {
+    width: 166px;
+  }
 
   @media (min-width: @tablet-width) {
     grid-column-start: 1;
@@ -33,10 +45,10 @@
     padding-bottom: 30px;
 
     @media (min-width: @tablet-width) {
+      justify-self: start;
       width: 130px;
       margin: 0;
       padding: 0;
-      justify-self: start;
     }
   }
 }

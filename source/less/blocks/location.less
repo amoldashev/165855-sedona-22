@@ -24,8 +24,8 @@
 
   display: block;
   margin: 0;
-  text-align: center;
   padding-bottom: 26px;
+  text-align: center;
 
   &--leading {
     .font(@font-size: 21px, @font-weight: 700);
@@ -34,9 +34,11 @@
 
 .location__link {
   .font(@font-size: 21px, @font-weight: 700);
+  .link();
 
   display: flex;
-  height: 58px;
   justify-content: center;
   align-items: center;
+  height: 58px;
+  padding: 10px 30px;
 }

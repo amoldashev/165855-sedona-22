@@ -2,55 +2,50 @@
   .clear-list();
   .container();
 
+  width: 100%;
   background-color: @basic-white;
   color: @basic-black;
   text-align: left;
-  width: 100%;
-  padding-top: 20px;
-  padding-bottom: 30px;
+
+  @media (min-width: 640px) {
+    display: flex;
+  }
 
   @media (min-width: @tablet-width) {
-    .reset-container();
-
-    display: flex;
-    padding-top: 0;
-    padding-bottom: 0;
+    display: block;
+    width: 100%;
   }
 }
 
-.commodities__text {
-  .font(@font-size: 14px);
+.commodities__grid {
+  @media (min-width: @tablet-width) {
+    .reset-container();
 
-  display: block;
-  margin: 0;
-  padding-top: 10px;
-
-  &--leading {
-    .font(@font-size: 18px, @font-weight: 700);
-
-    padding-top: 20px;
-
-    @media (min-width: @tablet-width) {
-      .font(@font-size: 21px, @font-weight: 700);
-    }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
   }
 }
 
 .commodities__item {
   position: relative;
-  padding-left: 60px;
+
+  @media (min-width: 321px) {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    width: 200px;
+    margin: 0 auto;
+  }
+
 
   @media (min-width: @tablet-width) {
-    padding: 0  36px;
-    padding-top: 150px;
     text-align: center;
+    width: 256px;
+    height: 100%;
   }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 58px;
-    padding-top: 150px;
-  }
-
 
   &--before {
     &::before {
@@ -71,7 +66,7 @@
       }
 
       @media (min-width: @desktop-width) {
-        left: 160px;
+        left: 90px;
       }
     }
   }
@@ -83,7 +78,6 @@
 
       @media (min-width: @tablet-width) {
         background-image: url("../../img/icons/home-tablet.svg");
-        height: 72px;
       }
     }
   }
@@ -95,8 +89,8 @@
       background-repeat: no-repeat;
 
       @media (min-width: @tablet-width) {
-        background-image: url("../../img/icons/gift-tablet.svg");
         height: 75px;
+        background-image: url("../../img/icons/gift-tablet.svg");
       }
     }
   }
@@ -107,16 +101,48 @@
       background-repeat: no-repeat;
 
       @media (min-width: @tablet-width) {
-        background-image: url("../../img/icons/burger-tablet.svg");
-        top: 75px;
-        left: 95px;
         height: 72px;
+        top: 75px;
+        background-image: url("../../img/icons/burger-tablet.svg");
       }
+    }
+  }
+}
 
-      @media (min-width: @desktop-width) {
+.commodities__wrapper {
+  .f-block-wrapper(10px);
 
-        left: 170px;
-      }
+  padding-left: 60px;
+
+  @media (min-width: 321px) {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 640px) {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: @tablet-width) {
+    .f-block-wrapper(30px);
+
+    padding-top: 150px;
+  }
+}
+
+.commodities__text {
+  .font(@font-size: 14px);
+
+  display: block;
+  margin: 0;
+  padding-top: 10px;
+
+  &--leading {
+    .font(@font-size: 18px, @font-weight: 700);
+
+    @media (min-width: @tablet-width) {
+      .font(@font-size: 21px, @font-weight: 700);
     }
   }
 }

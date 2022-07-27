@@ -2,22 +2,23 @@
   height: 350px;
   margin-top: 40px;
   margin-bottom: 40px;
+  background-color: @marine;
 
   &--before {
     position: relative;
 
     &::before {
       position: absolute;
-      display: block;
       z-index: 2;
       content: "";
+      display: block;
       width: 27px;
       height: 27px;
+      top: 50%;
+      left: 50%;
       background-color: @marine;
       border: 4px solid @basic-white;
       border-radius: 50%;
-      top: 50%;
-      left: 50%;
       transform: translate(-50%, -50%);
     }
   }
@@ -32,5 +33,5 @@
 .map-api__img {
   display: block;
   width: 100%;
-  height: inherit;
+  height: 350px;
 }

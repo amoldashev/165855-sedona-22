@@ -2,6 +2,7 @@ const button = document.querySelector('#menu-button');
 const cancel = document.querySelector('#menu-cancel');
 const menu = document.querySelector('.menu');
 const nav = document.querySelector('.main-header__main-nav');
+const BROWSER_WIDTH = 1151;
 
 nav.classList.remove('main-header__main-nav--nojs');
 
@@ -14,7 +15,7 @@ const buttonHandler = () => {
   };
 }
 
-button.addEventListener('click', buttonHandler);
+
 
 const menuHandler = () => {
   if (isOpen == true) {
@@ -24,3 +25,18 @@ const menuHandler = () => {
 }
 
 cancel.addEventListener('click', menuHandler);
+button.addEventListener('click', buttonHandler);
+
+function resizeHandler() {
+  if (window.innerWidth > BROWSER_WIDTH) {
+    menu.classList.remove('hide');
+    cancel.removeEventListener('click', menuHandler);
+    button.removeEventListener('click', buttonHandler);
+  } else {
+    console.log(window.innerWidth)
+    button.addEventListener('click', buttonHandler);
+    cancel.addEventListener('click', menuHandler);
+  }
+}
+
+window.addEventListener('resize', resizeHandler);

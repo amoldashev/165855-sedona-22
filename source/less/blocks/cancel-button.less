@@ -2,7 +2,7 @@
   position: absolute;
   width: 30px;
   height: 30px;
-  top: 30px;
+  top: 15px;
   right: 30px;
   background-color: transparent;
   border: none;
@@ -14,9 +14,9 @@
     display: block;
     width: 30px;
     height: 4px;
-    background-color: @basic-white;
     top: 11px;
     right: -2px;
+    background-color: @basic-white;
     transform: rotate(-45deg);
   }
 
@@ -27,10 +27,20 @@
     display: block;
     width: 30px;
     height: 4px;
-    background-color: @basic-white;
     top: 11px;
     right: -2px;
+    background-color: @basic-white;
     transform: rotate(45deg);
+  }
+
+  &:hover::before,
+  &:hover::after {
+    background-color: @rgba-cancel-button-hover;
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: @rgba-cancel-button-active;
   }
 
   @media (min-width: @tablet-width) {

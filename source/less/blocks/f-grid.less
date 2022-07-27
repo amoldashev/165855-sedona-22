@@ -2,7 +2,7 @@
   .f-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr 256px 256px;
+    grid-template-rows: 1fr 256px min-content;
   }
 
   .f-grid__item1 {
@@ -14,7 +14,7 @@
     &--subgrid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 256px 330px;
+      grid-template-rows: 256px 1fr;
     }
   }
 

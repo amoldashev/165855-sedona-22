@@ -8,10 +8,14 @@
   @media (min-width: @tablet-width) {
     grid-column-start: 3;
     grid-column-end: -1;
+    justify-self: end;
     padding: 0;
     margin: 0;
-    justify-self: end;
   }
+}
+
+.copyright__text {
+  .font(@font-size: 14px);
 }
 
 .copyright__link {
@@ -19,6 +23,17 @@
   align-items: center;
 }
 
-.copyright__img {
-  display: block;
+.copyright__icon-img {
+  width: 27px;
+  height: 34px;
+  fill: @basic-black;
+
+  &:hover {
+    fill: @marine;
+  }
+
+  &:active {
+    fill: @basic-black;
+    opacity: 0.3;
+  }
 }

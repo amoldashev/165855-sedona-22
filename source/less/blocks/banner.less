@@ -5,21 +5,46 @@
   width: 100%;
   height: 389px;
   background-color: @marine;
-  background-image: url("../img/header_bg.jpg");
+  background-image: url("../img/header-bg.jpg");
   background-position: center 0;
   background-repeat: no-repeat;
   background-size: 100% auto;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/header-bg@2x.jpg");
+  }
+
+  @media (min-width: 321px) {
+    margin: 0 auto;
+    height: 389px;
+    background-size: cover;
+    background-image: url("../img/header-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-bg-tablet@2x.jpg");
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 768px;
-    margin: 0 auto;
     height: 518px;
+    margin: 0 auto;
+    background-image: url("../img/header-bg-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-bg-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
     .container(@tablet-width, @padding: 0);
 
     width: @desktop-width;
+    background-image: url("../img/header-bg-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-bg-desktop@2x.jpg");
+    }
   }
 
   &::before {
@@ -34,6 +59,12 @@
     background-image: url("../../img/icons/triangle.svg");
     background-position: right bottom;
     background-repeat: no-repeat;
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../../img/icons/triangle-desktop.svg");
+      transform: rotateY(180deg);
+      right: 0;
+    }
   }
 
   &::after {
@@ -49,22 +80,29 @@
     background-position: right bottom;
     background-repeat: no-repeat;
     transform: rotateY(180deg);
+
+    @media (min-width: @desktop-width) {
+      background-image: url("../../img/icons/triangle-desktop.svg");
+      transform: rotateY(0deg);
+      left: 0%;
+    }
   }
 }
 
 .banner__img {
   display: block;
-  width: 100%;
-  height: 389px;
+  width: 282px;
+  height: 100%;
+  margin-left: -10px;
 
-  @media (min-width: @tablet-width) {
-    width: 461px;
-    height: 350px;
+  @media (min-width: 321px) {
     margin: 0 auto;
-    padding-top: 90px;
   }
 
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
+  @media (min-width: @tablet-width) {
+    width: 450px;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 40px;
   }
 }
