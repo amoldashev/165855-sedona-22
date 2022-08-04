@@ -40,79 +40,17 @@
     margin: 0 auto;
   }
 
-
   @media (min-width: @tablet-width) {
     text-align: center;
     width: 256px;
     height: 100%;
-  }
-
-  &--before {
-    &::before {
-      position: absolute;
-      z-index: 2;
-      content: "";
-      display: block;
-      width: 39px;
-      height: 36px;
-      top: 20px;
-      left: 0;
-
-      @media (min-width: @tablet-width) {
-        width: 75px;
-        height: 75px;
-        top: 70px;
-        left: 90px;
-      }
-
-      @media (min-width: @desktop-width) {
-        left: 90px;
-      }
-    }
-  }
-
-  &--before1 {
-    &::before {
-      background-image: url("../../img/icons/home.svg");
-      background-repeat: no-repeat;
-
-      @media (min-width: @tablet-width) {
-        background-image: url("../../img/icons/home-tablet.svg");
-      }
-    }
-  }
-
-  &--before2 {
-    &::before {
-      height: 38px;
-      background-image: url("../../img/icons/gift.svg");
-      background-repeat: no-repeat;
-
-      @media (min-width: @tablet-width) {
-        height: 75px;
-        background-image: url("../../img/icons/gift-tablet.svg");
-      }
-    }
-  }
-
-  &--before3 {
-    &::before {
-      background-image: url("../../img/icons/burger.svg");
-      background-repeat: no-repeat;
-
-      @media (min-width: @tablet-width) {
-        height: 72px;
-        top: 75px;
-        background-image: url("../../img/icons/burger-tablet.svg");
-      }
-    }
   }
 }
 
 .commodities__wrapper {
   .f-block-wrapper(10px);
 
-  padding-left: 60px;
+  display: flex;
 
   @media (min-width: 321px) {
     width: 320px;
@@ -120,14 +58,24 @@
   }
 
   @media (min-width: 640px) {
-    width: 200px;
+    width: 220px;
     margin: 0 auto;
+    display: block;
   }
 
   @media (min-width: @tablet-width) {
     .f-block-wrapper(30px);
 
-    padding-top: 150px;
+    width: 100%;
+  }
+}
+
+.commodities__inner {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 640px) {
+    display: block;
   }
 }
 
@@ -136,13 +84,38 @@
 
   display: block;
   margin: 0;
-  padding-top: 10px;
+  padding-left: 20px;
+
+  @media (min-width: 640px) {
+    text-align: center;
+    padding-left: 0;
+  }
 
   &--leading {
     .font(@font-size: 18px, @font-weight: 700);
 
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+    @media (min-width: 640px) {
+      text-align: center;
+      padding-top: 20px;
+    }
+
     @media (min-width: @tablet-width) {
       .font(@font-size: 21px, @font-weight: 700);
     }
+  }
+}
+
+.commodities__icon-img {
+  width: 60px;
+  height: 37px;
+
+  @media (min-width: 640px) {
+    width: 75px;
+    height: 72px;
+    display: block;
+    margin: 0 auto;
   }
 }

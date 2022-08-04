@@ -1,6 +1,7 @@
 {
     "icons": [
-        {"src": "/img/icons/favicon_192.png", "type": "image/png", "size": "192x192"},
-        {"src": "/img/icons/favicon_512.png", "type": "image/png", "size": "512x512"}
+        {"src": "/img/favicons/favicon_192.png", "type": "image/png", "size": "192x192"},
+        {"src": "/img/favicons/favicon_512.png", "type": "image/png", "size": "512x512"},
+        {"src": "/img/favicons/apple.png", "type": "image/png", "size": "192x192"}
     ]
 }

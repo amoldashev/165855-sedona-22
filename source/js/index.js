@@ -15,8 +15,6 @@ const buttonHandler = () => {
   };
 }
 
-
-
 const menuHandler = () => {
   if (isOpen == true) {
     menu.classList.toggle('hide');
@@ -33,7 +31,6 @@ function resizeHandler() {
     cancel.removeEventListener('click', menuHandler);
     button.removeEventListener('click', buttonHandler);
   } else {
-    console.log(window.innerWidth)
     button.addEventListener('click', buttonHandler);
     cancel.addEventListener('click', menuHandler);
   }

@@ -2,9 +2,11 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8" />
+    <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="favicons.webmanifest" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style.min.css" />
     <title>HTML Academy: Седона</title>
   </head>
 
@@ -14,7 +16,9 @@
         <div class="main-nav__menu menu">
           <ul class="menu__list">
             <li class="menu__item">
-              <a class="menu__link menu__link--grid-item1 menu__link--active">Главная</a>
+              <a class="menu__link menu__link--grid-item1 menu__link--active"
+                >Главная</a
+              >
             </li>
             <li class="menu__item">
               <a class="menu__link menu__link--grid-item2" href="#"
@@ -38,6 +42,7 @@
             id="menu-cancel"
             class="menu__cancel-button cancel-button"
             type="button"
+            aria-label="Кнопка закрыть меню"
           ></button>
         </div>
         <div class="main-nav__page-logo page-logo">
@@ -180,13 +185,14 @@
           id="menu-button"
           class="main-nav__burger-button burger-button"
           type="button"
+          aria-label="Кнопка открыть меню"
         ></button>
       </nav>
     </header>
     <main>
       <section class="banner">
-        <svg class="banner__img" width="282" height="214">
-          <use xlink:href="../img/icons/main.svg#icon-banner"></use>
+        <svg class="banner__img" width="100%" height="214">
+          <use xlink:href="../img/main.svg#icon-banner"></use>
         </svg>
       </section>
       <section class="features">
@@ -212,7 +218,9 @@
               >
                 <div class="lead-f-block__text-content">
                   <div class="lead-f-block__wrapper">
-                    <h3 class="lead-f-block__text lead-f-block__text--leading">Настоящий городок</h3>
+                    <h3 class="lead-f-block__text lead-f-block__text--leading">
+                      Настоящий городок
+                    </h3>
                     <p class="lead-f-block__text">— №1 —</p>
                     <p class="lead-f-block__text">
                       Седона не аттракцион для туристов, там течет своя жизнь
@@ -220,6 +228,26 @@
                   </div>
                 </div>
                 <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    srcset="
+                      img/features-1-desktop.webp 1x,
+                      img/features-1-desktop.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/features-1-tablet.webp 1x,
+                      img/features-1-tablet.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="img/features-1.webp 1x, img/features-1.webp 2x"
+                  />
                   <source
                     media="(min-width: 1200px)"
                     srcset="
@@ -245,40 +273,58 @@
                 </picture>
                 <ul class="lead-f-block__list commodities commodities__grid">
                   <li
-                    class="commodities__item commodities__item--before commodities__item--before1"
+                    class="commodities__item"
                   >
                     <div class="commodities__wrapper">
-                      <p class="commodities__text commodities__text--leading">
-                        Жилье
-                      </p>
-                      <p class="commodities__text">
-                        Рекомендуем пожить в настоящем мотеле, все как в кино!
-                      </p>
+                      <svg class="commodities__icon-img" width="39" height="37">
+                        <use xlink:href="../img/main.svg#icon-home"></use>
+                      </svg>
+                      <div class="commodities__inner">
+                        <p class="commodities__text commodities__text--leading">
+                          Жилье
+                        </p>
+                        <p class="commodities__text">
+                          Рекомендуем пожить в настоящем мотеле, все как в кино!
+                        </p>
+                      </div>
                     </div>
                   </li>
                   <li
-                    class="commodities__item commodities__item--before commodities__item--before2"
+                    class="commodities__item"
                   >
-                  <div class="commodities__wrapper">
-                    <p class="commodities__text commodities__text--leading">
-                      Сувениры
-                    </p>
-                    <p class="commodities__text">
-                      Не только китайского, но и местного производства!
-                    </p>
-                  </div>
+                    <div class="commodities__wrapper">
+                      <svg class="commodities__icon-img" width="32" height="38">
+                        <use xlink:href="../img/main.svg#icon-gift"></use>
+                      </svg>
+                      <div class="commodities__text-inner">
+                        <div class="commodities__inner">
+                          <p class="commodities__text commodities__text--leading">
+                            Сувениры
+                          </p>
+                          <p class="commodities__text">
+                            Не только китайского, но и местного производства!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
                   </li>
                   <li
-                    class="commodities__item commodities__item--before commodities__item--before3"
+                    class="commodities__item"
                   >
-                  <div class="commodities__wrapper">
-                    <p class="commodities__text commodities__text--leading">
-                      Еда
-                    </p>
-                    <p class="commodities__text">
-                      Всегда заказывайте фирменный бургер, вы не разочаруетесь!
-                    </p>
-                  </div>
+                    <div class="commodities__wrapper">
+                      <svg class="commodities__icon-img" width="40" height="35">
+                        <use xlink:href="../img/main.svg#icon-burger"></use>
+                      </svg>
+                      <div class="commodities__inner">
+                        <p class="commodities__text commodities__text--leading">
+                          Еда
+                        </p>
+                        <p class="commodities__text">
+                          Всегда заказывайте фирменный бургер, вы не
+                          разочаруетесь!
+                        </p>
+                      </div>
+                    </div>
                   </li>
                 </ul>
               </li>
@@ -299,6 +345,26 @@
                   </div>
                 </div>
                 <picture>
+                  <source
+                    type="image/webp"
+                    media="(min-width: 1200px)"
+                    srcset="
+                      img/features-2-desktop.webp 1x,
+                      img/features-2-desktop.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    media="(min-width: 768px)"
+                    srcset="
+                      img/features-2-tablet.webp 1x,
+                      img/features-2-tablet.webp 2x
+                    "
+                  />
+                  <source
+                    type="image/webp"
+                    srcset="img/features-2.webp 1x, img/features-2.webp 2x"
+                  />
                   <source
                     media="(min-width: 1200px)"
                     srcset="
@@ -384,6 +450,20 @@
           </h2>
           <picture>
             <source
+              type="image/webp"
+              media="(min-width: 1200px)"
+              srcset="img/map-desktop.webp 1x, img/map-desktop.webp 2x"
+            />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              srcset="img/map-tablet.webp 1x, img/map-tablet.webp 2x"
+            />
+            <source
+              type="image/webp"
+              srcset="img/map.webp 1x, img/map.webp 2x"
+            />
+            <source
               media="(min-width: 1200px)"
               srcset="img/map-desktop.jpg 1x, img/map-desktop@2x.jpg 2x"
             />
@@ -414,21 +494,21 @@
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <svg class="socials__img" width="18" height="15">
-                  <use xlink:href="../img/icons/main.svg#icon-twitter"></use>
+                  <use xlink:href="../img/main.svg#icon-twitter"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <svg class="socials__img" width="9" height="19">
-                  <use xlink:href="../img/icons/main.svg#icon-fb"></use>
+                  <use xlink:href="../img/main.svg#icon-fb"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
               <a class="socials__link" href="#">
                 <svg class="socials__img" width="20" height="14">
-                  <use xlink:href="../img/icons/main.svg#icon-youtube"></use>
+                  <use xlink:href="../img/main.svg#icon-youtube"></use>
                 </svg>
               </a>
             </li>
@@ -441,12 +521,12 @@
             href="https://htmlacademy.ru/intensive/adaptive"
           >
             <svg class="copyright__icon-img" width="27" height="35">
-              <use xlink:href="../img/icons/main.svg#icon-htmlacademy"></use>
+              <use xlink:href="../img/main.svg#icon-htmlacademy"></use>
             </svg>
           </a>
         </div>
       </div>
     </footer>
-    <script src="./js/index.js"></script>
+    <script src="./js/index.min.js"></script>
   </body>
 </html>
